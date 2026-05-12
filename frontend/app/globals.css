@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Luminous B2B Theme */
+    --background: 0 0% 98%; /* #FAFAFA */
+    --foreground: 240 10% 10%; /* #18181B */
+
+    --card: 0 0% 100%; /* #FFFFFF */
+    --card-foreground: 240 10% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 10%;
+
+    --primary: 349 100% 78%; /* #FF8FA3 */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 10% 10%;
+
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%; /* #71717A */
+
+    --accent: 260 100% 77%; /* #B28DFF */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 6% 90%; /* #E4E4E7 */
+    --input: 240 6% 90%;
+    --ring: 260 100% 77%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-wovio-snow text-wovio-charcoal antialiased;
+  }
+}
