@@ -8,7 +8,9 @@ import {
   LogOut, 
   CreditCard, 
   PenTool, 
-  Link as LinkIcon 
+  Link as LinkIcon,
+  Rocket,
+  CalendarClock
 } from "lucide-react";
 
 export function Sidebar() {
@@ -16,6 +18,8 @@ export function Sidebar() {
 
   const links = [
     { name: "Content Hub", href: "/dashboard", icon: LayoutDashboard },
+    { name: "Growth Engine", href: "/dashboard/seo-plan", icon: Rocket },
+    { name: "Schedule", href: "/dashboard/schedule", icon: CalendarClock },
     { name: "Brand Voice", href: "/dashboard/brand", icon: PenTool },
     { name: "Integrations", href: "/dashboard/integrations", icon: LinkIcon },
     { name: "Billing", href: "/dashboard/billing", icon: CreditCard },

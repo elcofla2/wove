@@ -30,7 +30,7 @@ export default function CheckoutPage() {
         {/* Left Col: Payment Form */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="lg:col-span-7 bg-white rounded-3xl p-8 sm:p-12 shadow-2xl border border-wovio-zinc">
           <h1 className="text-3xl font-display font-bold text-wovio-charcoal mb-2">Payment Details</h1>
-          <p className="text-wovio-slate mb-8">Complete your subscription to Wovio Pro.</p>
+          <p className="text-wovio-slate mb-8">Complete your subscription to Wovio Growth.</p>
 
           <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
             
@@ -81,7 +81,7 @@ export default function CheckoutPage() {
 
             <Link href="/dashboard" className="block pt-6">
               <Button className="w-full bg-wovio-charcoal hover:bg-wovio-charcoal/90 text-white font-bold py-7 rounded-xl shadow-lg text-lg">
-                Pay $99.00
+                Pay $149.00
               </Button>
             </Link>
             
@@ -98,15 +98,15 @@ export default function CheckoutPage() {
             
             <div className="flex justify-between items-center mb-4 pb-4 border-b border-zinc-700">
               <div>
-                <p className="font-bold text-lg">Wovio Pro</p>
+                <p className="font-bold text-lg">Wovio Growth</p>
                 <p className="text-zinc-400 text-sm">Monthly Subscription</p>
               </div>
-              <p className="font-bold text-lg">$99.00</p>
+              <p className="font-bold text-lg">$149.00</p>
             </div>
 
             <div className="flex justify-between items-center mb-6">
               <p className="text-zinc-400">Total due today</p>
-              <p className="text-3xl font-bold">$99.00</p>
+              <p className="text-3xl font-bold">$149.00</p>
             </div>
 
             <div className="space-y-4">
@@ -114,19 +114,19 @@ export default function CheckoutPage() {
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-wovio-lavender flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">3 Workspaces / Companies</span>
+                  <span className="text-sm">12 automated daily tasks (SEO·AEO·GEO)</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-wovio-lavender flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">Unlimited publishing days</span>
+                  <span className="text-sm">Up to 24 posts/month auto-published</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-wovio-lavender flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">Up to 30 posts per month</span>
+                  <span className="text-sm">Competitor intelligence scanning</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-wovio-lavender flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">Direct CMS Auto-publishing</span>
+                  <span className="text-sm">Direct CMS auto-publishing</span>
                 </li>
               </ul>
             </div>

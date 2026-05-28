@@ -2,10 +2,11 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LayoutDashboard, FileText, Fingerprint, Blocks, Settings, Sparkles, ChevronsUpDown, Lock, CreditCard, Code2 } from "lucide-react";
+import { LayoutDashboard, FileText, Fingerprint, Blocks, Settings, Sparkles, ChevronsUpDown, Lock, CreditCard, Code2, Target } from "lucide-react";
 
 const links = [
   { name: "Overview", href: "/dashboard", icon: LayoutDashboard },
+  { name: "SEO Plan", href: "/dashboard/seo-plan", icon: Target },
   { name: "Content Hub", href: "/dashboard/content-hub", icon: FileText },
   { name: "Brand Identity", href: "/dashboard/brand-identity", icon: Fingerprint },
   { name: "Integrations", href: "/dashboard/integrations", icon: Blocks },

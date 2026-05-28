@@ -28,7 +28,44 @@ We will maintain two environments. This is **not** too much for an MVP; it is a 
 1. Connect `/dashboard/brand-identity` to the Python backend (Save settings to Supabase).
 2. Implement Celery/Redis for background AI generation.
 3. Connect `/dashboard/content-hub` to display the database records of generated posts.
+4. **Growth Engine — SEO/AEO/GEO Planner (UI Complete ✅):** Connect `/dashboard/seo-plan` to the Python backend.
 *Release 3.0: "Interactive MVP" - A user can click "Generate" on the site, wait 30 seconds, and see the article appear.*
+
+## Phase 3.5: The Compass (Growth Engine Intelligence — SEO · AEO · GEO)
+**Goal:** The system auto-generates a full content strategy optimized for **all three engines** and executes it without user intervention. This is Wovio's core differentiator — not an auditor, a **planner that executes itself**.
+1. **Website Analysis Engine:** Crawl the client's URL → extract niche, existing pages, competitors, and content gaps.
+2. **Content Pipeline Generator:** AI builds a 30-day publishing calendar with titles, target keywords (primary + secondary), word counts, and article outlines.
+3. **Link Strategy Engine:** Auto-plan internal links (hub pages → new posts) and external citations (authority sources per niche).
+4. **Authority Pillars:** Group planned content into topic clusters with authority scores that grow as posts publish.
+5. **Next Post Preview:** Always show the upcoming auto-publish with full outline, keywords, and links so the client sees exactly what's coming.
+6. **AEO Formatting Engine:** Auto-generate FAQ schema, answer-first content blocks, and structured data optimized for AI answer engines (ChatGPT, Perplexity, Google AI Overviews).
+7. **GEO & Local Visibility Engine:** Local keyword optimization, NAP consistency checks, location-based content variations, and Google Business Profile signal planning.
+8. **Competitor Intelligence Module:** Track competitor rankings, new publications, and keyword strategies. Automatically identify gaps to exploit.
+9. **Auto-Execution Loop:** Integrate with the Autopilot cron (Phase 4) so the plan doesn't just display — it **executes itself** post by post on schedule.
+10. **Progress Tracking:** Real-time status updates (Published → Scheduled → In Queue) visible in the Content Pipeline table.
+*Release 3.5: "Growth Engine Brain" - A client enters their URL or describes their business, Wovio builds a 24-post plan optimized for SEO+AEO+GEO, and starts publishing automatically.*
+
+## Phase 3.7: The Eyes (Operations Dashboard & Schedule)
+**Goal:** The client can see exactly what Wovio is doing every day — without lifting a finger. Full transparency into the automated engine.
+1. **Daily Schedule View (UI Complete ✅):** `/dashboard/schedule` shows 12 automated daily tasks with real-time status (Done, Running, Upcoming, Skipped).
+2. **Task Result Reporting:** Each completed task shows expandable results — what was found, what was changed, what was queued.
+3. **12-Task Automation Pipeline:**
+   - `8:30 AM` Measurement & Learning Check (Daily)
+   - `9:00 AM` 30-Day SEO/AEO/GEO Plan Runner (Daily)
+   - `9:45 AM` Competitor Intelligence Scanner (Tue/Thu)
+   - `10:00 AM` Content Inventory & Gap Check (Daily)
+   - `11:30 AM` Cluster & Internal-Link Planner (Mon/Wed/Fri)
+   - `12:15 PM` GEO & Local Visibility Optimizer (Mon/Wed/Fri)
+   - `1:30 PM` Publishing Candidate Builder (Mon/Wed/Fri)
+   - `2:30 PM` Existing Content Optimizer (Tue/Thu/Sat)
+   - `3:45 PM` Schema & AEO Validator (Daily)
+   - `4:45 PM` Authority & Citation Prep (Tue/Thu)
+   - `5:30 PM` Quality Gate Sweep (Mon/Wed/Fri)
+   - `6:00 PM` Technical Health Monitor (Daily)
+4. **Pause/Resume Controls:** Client can pause the entire automation engine from the dashboard.
+5. **Backend Cron Integration:** Connect schedule UI to actual Celery/Redis task queue with real-time WebSocket status updates.
+6. **Daily Summary Email:** Auto-send a digest email at 7:00 PM summarizing what was accomplished today.
+*Release 3.7: "Transparent Autopilot" - The client opens the Schedule page and sees exactly what Wovio did today, what it's doing now, and what's coming next. Zero mystery.*
 
 ## Phase 4: The Delivery (CMS Integration)
 **Goal:** Push generated content directly to the client's website.
@@ -39,7 +76,7 @@ We will maintain two environments. This is **not** too much for an MVP; it is a 
 
 ## Phase 5: The Garden (Monetization & Launch)
 **Goal:** Get paid.
-1. Integrate Stripe Checkout for the $99/mo Pro Plan.
+1. Integrate Stripe Checkout for the $149/mo Growth Plan and $299/mo Agency Plan.
 2. Implement Stripe Webhooks in the Python backend to upgrade the user's Supabase role.
 3. Activate the UI locks (Hard Gating) based on the user's subscription status.
 *Release 5.0: "Commercial Launch" - We can accept real credit cards and users are limited by their tier.*

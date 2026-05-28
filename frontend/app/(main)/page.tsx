@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle2, Globe, Sparkles, Star, Zap, Search, FileText, UploadCloud, Rocket } from "lucide-react";
+import { ArrowRight, CheckCircle2, Globe, Sparkles, Star, Zap, Search, FileText, UploadCloud, Rocket, Target } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -13,7 +13,7 @@ export default function Home() {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } },
   };
 
   return (
@@ -161,6 +161,46 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* GROWTH ENGINE FEATURE CALLOUT */}
+      <section className="w-full py-24 bg-gradient-to-b from-wovio-pure to-wovio-snow px-4 relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-wovio-lavender/5 rounded-full blur-[120px] pointer-events-none" />
+        <div className="max-w-6xl mx-auto relative z-10">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-wovio-coral/10 text-wovio-coral border border-wovio-coral/20 font-medium text-sm mb-6">
+              <Target className="w-4 h-4" /> NEW: Growth Engine — SEO · AEO · GEO
+            </div>
+            <h2 className="text-3xl sm:text-5xl font-display font-bold text-wovio-charcoal mb-4 leading-tight">
+              Dominate Search, AI Answers,<br />and <span className="text-wovio-lavender">Generative Results</span>.
+            </h2>
+            <p className="text-wovio-slate text-lg max-w-2xl mx-auto">
+              Enter your URL or describe your business. Wovio builds a 30-day growth plan optimized for traditional search (SEO), AI answer engines (AEO), and generative AI results (GEO) — then executes it automatically.
+            </p>
+          </motion.div>
+
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              { icon: Search, title: "SEO Optimization", desc: "Keyword targeting, internal linking, and content planning to dominate Google organic results.", color: "text-wovio-lavender" },
+              { icon: FileText, title: "AEO Readiness", desc: "Schema markup, FAQ structuring, and answer-first formatting for AI engines like ChatGPT and Perplexity.", color: "text-wovio-coral" },
+              { icon: Target, title: "GEO Visibility", desc: "Local optimization, citation building, and geo-targeted content to win in your market.", color: "text-wovio-mint" },
+            ].map((feature, i) => (
+              <div key={i} className="bg-white rounded-2xl p-8 border border-wovio-zinc shadow-sm hover:shadow-xl hover:border-wovio-lavender/30 transition-all group">
+                <feature.icon className={`w-10 h-10 ${feature.color} mb-5 group-hover:scale-110 transition-transform`} />
+                <h3 className="font-display font-bold text-lg text-wovio-charcoal mb-2">{feature.title}</h3>
+                <p className="text-sm text-wovio-slate">{feature.desc}</p>
+              </div>
+            ))}
+          </motion.div>
+
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mt-12">
+            <Link href="/signup?plan=hobby">
+              <Button size="lg" className="bg-wovio-coral hover:bg-wovio-coral/90 text-white font-medium shadow-lg shadow-wovio-coral/30 px-8 py-6 text-lg rounded-full group">
+                Launch Your Growth Engine <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
+          </motion.div>
         </div>
       </section>
 
